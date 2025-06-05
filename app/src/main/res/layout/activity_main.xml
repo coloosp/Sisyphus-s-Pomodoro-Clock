@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center"
+    android:background="#FFF8F5">
+
+    <!-- 番茄等级和图片区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <ImageButton
+            android:id="@+id/tomatoImageButton"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/tomato1"
+            android:background="@android:color/transparent"
+            android:contentDescription="番茄等级图标"
+            android:scaleType="fitCenter"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/levelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="番茄等级: 1"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#E64A19"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+    <!-- 欢迎文本 -->
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="番茄钟"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#E64A19"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- 用户名显示（登录后可见） -->
+    <TextView
+        android:id="@+id/usernameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="#333333"
+        android:layout_gravity="center"
+        android:layout_marginBottom="40dp"
+        android:visibility="gone"/>
+
+    <!-- 开始番茄钟按钮 -->
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开始新的番茄钟"
+        android:padding="15dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="18sp"
+        android:background="#E64A19"
+        android:textColor="@android:color/white"/>
+
+    <!-- 历史记录按钮 -->
+    <Button
+        android:id="@+id/historyButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查看历史记录"
+        android:padding="15dp"
+        android:layout_marginBottom="40dp"
+        android:textSize="18sp"
+        android:background="#FF7043"
+        android:textColor="@android:color/white"/>
+
+    <!-- 登录/退出按钮 -->
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="登录/注册"
+        android:padding="15dp"
+        android:textSize="18sp"
+        android:background="#FFAB91"
+        android:textColor="@android:color/white"/>
+</LinearLayout>

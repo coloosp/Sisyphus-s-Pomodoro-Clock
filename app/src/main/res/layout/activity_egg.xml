@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 背景图片 -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/tomatofriend"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true" />
+
+    <!-- 内容区域 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="16dp">
+
+            <!-- 页面标题 -->
+            <TextView
+                android:id="@+id/pageTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="感谢你来到这里!"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="24dp"
+                android:gravity="center" />
+
+            <!-- 第一段文字 -->
+            <TextView
+                android:id="@+id/paragraph1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="我爹/我儿子：各种AI软件"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
+
+            <!-- 第二段文字 -->
+            <TextView
+                android:id="@+id/paragraph2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="代码/音效/页面设计：coloop"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="24dp" />
+
+            <!-- 第三段文字 -->
+            <TextView
+                android:id="@+id/paragraph3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="软件图标/美术设计/人力爬虫：王坤"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="32dp" />
+
+            <TextView
+                android:id="@+id/paragraph4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UI设计：全津怡"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="32dp" />
+
+            <TextView
+                android:id="@+id/paragraph5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试：小火柴，薛浩天，Mizuhasi(我的神秘网友)"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="32dp" />
+
+            <TextView
+                android:id="@+id/buttonHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="欢迎前往github↓支持我们！"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+
+            <!-- 图片按钮 -->
+            <ImageButton
+                android:id="@+id/tomatoImageButton"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/tomatolittle"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:onClick="onTomatoClick" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

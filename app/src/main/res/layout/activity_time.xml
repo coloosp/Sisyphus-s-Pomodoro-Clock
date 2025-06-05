@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <!-- 顶部状态区 -->
+    <LinearLayout
+        android:id="@+id/topSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- 状态文本 -->
+        <TextView
+            android:id="@+id/statusTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="#FF5722"
+            android:text="工作时间"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"/> <!-- 添加粗体 -->
+
+        <!-- 番茄计数 -->
+        <TextView
+            android:id="@+id/countTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#AAAAAA"
+            android:text="已完成: 0/4"
+            android:layout_marginTop="8dp"/>
+
+        <!-- 计时器显示 -->
+        <TextView
+            android:id="@+id/timerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="64sp"
+            android:textColor="@color/white"
+            android:text="25:00"
+            android:layout_marginTop="16dp"
+            android:shadowColor="#FF5722"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="16"/>
+    </LinearLayout>
+
+    <!-- 粒子进度条 -->
+    <com.example.tomatoclock.ParticleProgressView
+        android:id="@+id/particleProgress"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/topSection"
+        android:layout_marginTop="24dp"
+        app:particleColor="#FFFFFF"
+        app:progressColor="#FF5722"
+        app:backgroundColor="#303030"/>
+
+    <!-- 视频播放视图 -->
+    <VideoView
+        android:id="@+id/tomatoVideoView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerInParent="true"
+        android:visibility="visible"
+        android:layout_marginTop="20dp"/>
+
+    <!-- 控制按钮区 -->
+    <LinearLayout
+        android:id="@+id/controlSection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:text="开始"
+            android:textColor="@color/white"
+            android:backgroundTint="#4CAF50"
+            android:layout_margin="8dp"
+            android:elevation="4dp" />
+
+        <Button
+            android:id="@+id/pauseButton"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:text="暂停"
+            android:textColor="@color/white"
+            android:backgroundTint="#FF9800"
+            android:layout_margin="8dp"
+            android:visibility="gone"
+            android:elevation="4dp" />
+
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:text="重置"
+            android:textColor="@color/white"
+            android:backgroundTint="#F44336"
+            android:layout_margin="8dp"
+            android:elevation="4dp" />
+    </LinearLayout>
+
+    <!-- 底部装饰线 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="#FF5722"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

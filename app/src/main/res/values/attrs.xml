@@ -1,0 +1,8 @@
+<resources>
+    <declare-styleable name="ParticleProgressView">
+        <attr name="particleColor" format="color|reference" />
+        <attr name="progressColor" format="color|reference" />
+        <attr name="backgroundColor" format="color|reference" />
+        <attr name="particleCount" format="integer" />
+    </declare-styleable>
+</resources>
